@@ -985,7 +985,8 @@ cd /d "%PROJECT_PATH%"
 set PYTHON=python
 
 REM API starten
-start "SecureAI API" cmd /k "%PYTHON% -m uvicorn api.server:app --reload"
+start "SecureAI API" cmd /k "%PYTHON% -m uvicorn 
+api.server:app --reload"
 
 REM Health &amp; Docs im Browser
 start "" http://127.0.0.1:8000/health
@@ -1598,4 +1599,5 @@ REM GUI
     })();
 </script>
 </body>
+
 </html>
