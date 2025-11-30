@@ -1,0 +1,9 @@
+cryptography
+fastapi
+uvicorn
+python-multipart
+requests
+
+pytest>=8.0.0
+schemathesis>=3.0.0
+requests>=2.32.0
