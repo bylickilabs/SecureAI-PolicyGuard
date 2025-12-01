@@ -20,24 +20,19 @@ class SecureAIPolicyGuardApp:
     def __init__(self, root: tk.Tk):
         self.root = root
 
-        # Sprache
         self.current_lang = "de"
         self.trans = LANG[self.current_lang]
 
-        # API-Mode
         self.api_mode_var = tk.BooleanVar(value=True)
         self.api_url_var = tk.StringVar(value="http://127.0.0.1:8000")
 
-        # AI-Animation
         self.scanning = False
         self.ai_after_id = None
         self.ai_rotation_angle = 0
         self.ai_spin_index = 0
-        # werden aus localization geladen
         self.ai_labels = {"idle": "SECUREAI CORE", "active": "SECUREAI CORE – ACTIVE"}
         self.ai_spin = ["Analyzing …"]
 
-        # Detaildaten für jede Zeile: item_id -> {...}
         self.row_meta = {}
 
         self.root.title(APP_TITLE)
@@ -50,7 +45,6 @@ class SecureAIPolicyGuardApp:
         self._apply_ai_language()
         self._draw_ai_core_idle()
 
-    # ----------------- THEME / STYLE -----------------
     def _setup_style(self):
         style = ttk.Style(self.root)
         try:
@@ -107,9 +101,7 @@ class SecureAIPolicyGuardApp:
             "risk_crit": "#ff1744",
         }
 
-    # ----------------- UI Layout -----------------
     def _build_ui(self):
-        # Top: Titel + AI-Core rechts
         top = ttk.Frame(self.root)
         top.pack(fill=tk.X, padx=10, pady=8)
 
@@ -142,14 +134,12 @@ class SecureAIPolicyGuardApp:
         )
         self.ai_status_label.pack(anchor="e", pady=(2, 0))
 
-        # Controls (Verzeichnis, API, Sprache, Links)
         ctrls = ttk.Frame(self.root)
         ctrls.pack(fill=tk.X, padx=10)
 
         left_ctrls = ttk.Frame(ctrls)
         left_ctrls.pack(side=tk.LEFT, fill=tk.X, expand=True)
 
-        # Verzeichnis-Zeile
         dir_frame = ttk.Frame(left_ctrls)
         dir_frame.pack(fill=tk.X, pady=(0, 2))
 
@@ -162,7 +152,6 @@ class SecureAIPolicyGuardApp:
         self.btn_browse = ttk.Button(dir_frame, command=self.browse_directory)
         self.btn_browse.pack(side=tk.LEFT, padx=4)
 
-        # API-Zeile
         api_frame = ttk.Frame(left_ctrls)
         api_frame.pack(fill=tk.X, pady=(2, 0))
 
@@ -178,7 +167,6 @@ class SecureAIPolicyGuardApp:
         self.entry_api_url = ttk.Entry(api_frame, textvariable=self.api_url_var, width=40)
         self.entry_api_url.pack(side=tk.LEFT, padx=4)
 
-        # Rechts: Sprache + GitHub/Info
         right_ctrls = ttk.Frame(ctrls)
         right_ctrls.pack(side=tk.RIGHT)
 
@@ -194,7 +182,6 @@ class SecureAIPolicyGuardApp:
         self.btn_info = ttk.Button(right_ctrls, command=self.show_info)
         self.btn_info.pack(side=tk.RIGHT, padx=4)
 
-        # Scan-Button
         scan_frame = ttk.Frame(self.root)
         scan_frame.pack(fill=tk.X, padx=10, pady=(5, 5))
 
@@ -205,7 +192,6 @@ class SecureAIPolicyGuardApp:
         )
         self.btn_scan.pack(anchor="w")
 
-        # Panel mit Tabelle
         panel = ttk.Frame(self.root, style="Panel.TFrame")
         panel.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
@@ -237,7 +223,6 @@ class SecureAIPolicyGuardApp:
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
-        # Risk-Farben
         self.tree.tag_configure("risk_low", foreground=self.colors["risk_low"])
         self.tree.tag_configure("risk_mid", foreground=self.colors["risk_mid"])
         self.tree.tag_configure("risk_high", foreground=self.colors["risk_high"])
@@ -245,14 +230,12 @@ class SecureAIPolicyGuardApp:
 
         self.tree.bind("<Double-1>", self.show_details)
 
-        # Statusbar
         status_frame = ttk.Frame(self.root)
         status_frame.pack(fill=tk.X, padx=10, pady=5)
 
         self.status_label = ttk.Label(status_frame, anchor="w")
         self.status_label.pack(fill=tk.X, expand=True)
 
-    # ----------------- Sprache -----------------
     def _apply_language(self):
         tr = self.trans
 
@@ -299,7 +282,6 @@ class SecureAIPolicyGuardApp:
         self._apply_ai_language()
         self._draw_ai_core_idle()
 
-    # ----------------- AI-Animation -----------------
     def _draw_ai_core_idle(self):
         c = self.ai_canvas
         c.delete("all")
@@ -363,7 +345,6 @@ class SecureAIPolicyGuardApp:
         c.delete("all")
         cx, cy = 190, 45
 
-        # Label
         c.create_text(
             20,
             20,
@@ -373,7 +354,6 @@ class SecureAIPolicyGuardApp:
             font=("Consolas", 9, "bold"),
         )
 
-        # Rotierende Punkte
         radius = 38
         for i in range(10):
             angle = math.radians(self.ai_rotation_angle + i * 36)
@@ -388,7 +368,6 @@ class SecureAIPolicyGuardApp:
                 outline="",
             )
 
-        # Innerer Kern
         c.create_oval(
             cx - 12,
             cy - 12,
@@ -399,7 +378,6 @@ class SecureAIPolicyGuardApp:
             width=1,
         )
 
-        # AI-Status (Spinner-Text)
         if self.ai_spin:
             spin_text = self.ai_spin[self.ai_spin_index % len(self.ai_spin)]
             self.ai_status_label.config(text=spin_text)
@@ -408,7 +386,6 @@ class SecureAIPolicyGuardApp:
         self.ai_rotation_angle = (self.ai_rotation_angle + 8) % 360
         self.ai_after_id = self.root.after(80, self._ai_animation_step)
 
-    # ----------------- Scan & Analyse -----------------
     def browse_directory(self):
         directory = filedialog.askdirectory()
         if directory:
@@ -428,7 +405,6 @@ class SecureAIPolicyGuardApp:
             messagebox.showwarning(tr["msg_no_dir_title"], tr["msg_no_dir_body"])
             return
 
-        # Reset
         for item in self.tree.get_children():
             self.tree.delete(item)
         self.row_meta.clear()
@@ -455,7 +431,6 @@ class SecureAIPolicyGuardApp:
                         print(f"[WARN] Could not read file {full_path}: {e}")
                         continue
 
-                    # Analyse via API oder lokal
                     use_api = self.api_mode_var.get()
                     classification = None
                     risk_score = 0
@@ -482,7 +457,6 @@ class SecureAIPolicyGuardApp:
 
                     policy = get_policy_for_decision(classification, risk_score, entities)
 
-                    # Encryption / Aktion
                     action = "NONE"
                     if policy.get("encrypt"):
                         target_dir = base_dir / policy["target_dir"]
@@ -497,7 +471,6 @@ class SecureAIPolicyGuardApp:
                     elif policy.get("log_only"):
                         action = "LOG_ONLY"
 
-                    # Logging
                     log_action(
                         conn,
                         str(full_path),
@@ -508,7 +481,6 @@ class SecureAIPolicyGuardApp:
                         "",
                     )
 
-                    # Darstellung
                     tag = self._tag_for_risk(risk_score)
                     class_label = tr.get(f"classification_{classification}", classification)
                     action_label = tr.get(f"action_{action}", action)
@@ -552,7 +524,6 @@ class SecureAIPolicyGuardApp:
             return "risk_high"
         return "risk_crit"
 
-    # ----------------- Detail-Dialog -----------------
     def show_details(self, event):
         tr = self.trans
         item_id = self.tree.identify_row(event.y)
@@ -601,7 +572,6 @@ class SecureAIPolicyGuardApp:
 
         messagebox.showinfo(tr["detail_title"], detail_text)
 
-    # ----------------- Info & Links -----------------
     def show_info(self):
         tr = self.trans
         messagebox.showinfo(tr["info_title"], tr["info_body"])
@@ -609,12 +579,10 @@ class SecureAIPolicyGuardApp:
     def open_github(self):
         webbrowser.open(GITHUB_URL)
 
-
 def main():
     root = tk.Tk()
     app = SecureAIPolicyGuardApp(root)
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
