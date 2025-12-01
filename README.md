@@ -19,7 +19,25 @@ It bridges security operations, compliance, and IT automation with a dual-layer 
 <details>
   <summary>🎓 Certifications & Expertise</summary>
 
+| ![certificate_of_completion_backend_developer_with_python (1)](https://github.com/user-attachments/assets/887a209c-e899-49bb-822b-51883354fd6d) |
+|---|
+
 | ![certificate_of_completion_fullstack_developer_with_python (1)](https://github.com/user-attachments/assets/390c7574-0e01-48f3-94e3-a5f74ced5ead) |
+|---|
+
+| ![certificate_of_completion_front_end_development](https://github.com/user-attachments/assets/57f19f4e-99be-46fc-8efd-37cecf3c21b0)  |
+|---|
+
+| ![certificate_of_completion_html](https://github.com/user-attachments/assets/98a85fe5-7929-4baa-951a-664820af9e2d) |
+|---|
+
+| ![certificate_of_completion_css](https://github.com/user-attachments/assets/143eae2e-3493-41c1-97f8-7b5518cb0be9) |
+|---|
+
+| ![certificate_of_completion_javascript](https://github.com/user-attachments/assets/bff6b442-e34c-4dea-8d26-9f51bf696d93) |
+|---|
+
+| ![certificate_of_completion_bootstrap_5](https://github.com/user-attachments/assets/92102be2-ea0d-4eae-9698-04a05874429c) |
 |---|
 
 | ![certificate_of_completion_python](https://github.com/user-attachments/assets/e0741261-d519-4173-8ffe-dac8bbe821b3) |
