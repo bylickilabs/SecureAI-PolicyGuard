@@ -2,56 +2,46 @@ from app_meta import APP_NAME, APP_VERSION, APP_COMPANY
 
 LANG = {
     "de": {
-        # --- Window & General UI ---
         "window_title": f"{APP_NAME} – KI-gestützte Verschlüsselungs-Policies",
         "lang_de": "DE",
         "lang_en": "EN",
 
-        # Directory / Controls
         "label_directory": "Basisverzeichnis:",
         "button_browse": "Durchsuchen …",
         "button_scan": "Scannen & Richtlinien anwenden",
         "button_info": "Info",
         "button_github": "GitHub",
 
-        # API UI
         "label_api_mode": "API-Modus aktivieren:",
         "label_api_url": "API-Basis-URL:",
 
-        # Table / Columns
         "column_file": "Datei",
         "column_classification": "Klassifizierung",
         "column_risk": "Risiko",
         "column_action": "Aktion",
 
-        # Status messages
         "status_ready": "Bereit.",
         "status_scanning": "AI-Analyse läuft … bitte warten.",
         "status_done": "Scan abgeschlossen.",
         "status_error": "Fehler beim Scan – Details in der Konsole.",
         "status_api_error": "API-Fehler – Fallback auf lokale Analyse.",
 
-        # Dialog: no directory
         "msg_no_dir_title": "Kein Verzeichnis",
         "msg_no_dir_body": "Bitte wählen Sie zuerst ein Basisverzeichnis aus.",
 
-        # Dialog: scan finished
         "msg_scan_finished_title": "Scan abgeschlossen",
         "msg_scan_finished_body": "Der Scan wurde abgeschlossen.\nAnzahl analysierter Dateien: {count}",
 
-        # Classification labels
         "classification_PUBLIC": "Öffentlich",
         "classification_INTERNAL": "Intern",
         "classification_CONFIDENTIAL": "Vertraulich",
         "classification_HIGHLY_CONFIDENTIAL": "Streng vertraulich",
 
-        # Action labels
         "action_ENCRYPTED": "Verschlüsselt",
         "action_LOG_ONLY": "Nur protokolliert",
         "action_NONE": "Keine Maßnahme",
         "action_ERROR": "Fehler",
 
-        # Info dialog
         "info_title": "Informationen zur Anwendung",
         "info_body": (
             f"{APP_NAME}\n"
@@ -65,14 +55,12 @@ LANG = {
             "über die externe Systeme Analysen anfragen können."
         ),
 
-        # Detail dialog
         "detail_title": "AI-Analyse & Entscheidungsgrundlage",
         "detail_file": "Datei",
         "detail_classification": "Klassifizierung",
         "detail_risk": "Risiko-Score",
         "detail_explanation": "Begründung",
 
-        # --- AI Core / Animation (Persona C) ---
         "ai_core_idle": "AI Core: Bereit",
         "ai_core_active_label": "SECUREAI CORE – AKTIV",
         "ai_core_idle_label": "SECUREAI CORE",
@@ -85,8 +73,6 @@ LANG = {
             "Ich löse die finale Entscheidung aus …",
         ],
 
-        # --- Explainable AI Textbausteine (Persona C) ---
-        # Diese kannst du bei Bedarf im classifier verwenden.
         "ai_explain_header": "Ich habe diese Datei ausgewertet und eine Einstufung vorgenommen.",
         "ai_explain_risk": "Mein aktueller Risiko-Score für diese Datei liegt bei {score}/100.",
         "ai_explain_no_entities": (
@@ -105,7 +91,6 @@ LANG = {
             "kann aber je nach Policy sinnvoll sein."
         ),
 
-        # Mapping für Entity Labels (falls du sie anzeigen möchtest)
         "entity_EMAIL": "E-Mail-Adresse",
         "entity_IBAN": "IBAN",
         "entity_CREDIT_CARD": "Kreditkartennummer",
@@ -115,7 +100,6 @@ LANG = {
         "entity_ORG": "Organisation",
         "entity_LOCATION": "Ort",
 
-        # Optional: kurze AI-Hinweise
         "ai_hint_confidential": (
             "Ich sehe personenbezogene oder geschäftskritische Informationen. "
             "Ich empfehle dringend eine starke Verschlüsselung."
@@ -127,56 +111,46 @@ LANG = {
     },
 
     "en": {
-        # --- Window & General UI ---
         "window_title": f"{APP_NAME} – AI-powered Encryption Policies",
         "lang_de": "DE",
         "lang_en": "EN",
 
-        # Directory / Controls
         "label_directory": "Base directory:",
         "button_browse": "Browse…",
         "button_scan": "Scan & apply policies",
         "button_info": "Info",
         "button_github": "GitHub",
 
-        # API UI
         "label_api_mode": "Enable API mode:",
         "label_api_url": "API base URL:",
 
-        # Table / Columns
         "column_file": "File",
         "column_classification": "Classification",
         "column_risk": "Risk",
         "column_action": "Action",
 
-        # Status messages
         "status_ready": "Ready.",
         "status_scanning": "AI analysis in progress…",
         "status_done": "Scan completed.",
         "status_error": "Error during scan – see console for details.",
         "status_api_error": "API error – falling back to local analysis.",
 
-        # Dialog: no directory
         "msg_no_dir_title": "No directory selected",
         "msg_no_dir_body": "Please select a base directory first.",
 
-        # Dialog: scan finished
         "msg_scan_finished_title": "Scan completed",
         "msg_scan_finished_body": "Scan finished.\nNumber of analyzed files: {count}",
 
-        # Classification labels
         "classification_PUBLIC": "Public",
         "classification_INTERNAL": "Internal",
         "classification_CONFIDENTIAL": "Confidential",
         "classification_HIGHLY_CONFIDENTIAL": "Highly confidential",
 
-        # Action labels
         "action_ENCRYPTED": "Encrypted",
         "action_LOG_ONLY": "Logged only",
         "action_NONE": "No action",
         "action_ERROR": "Error",
 
-        # Info dialog
         "info_title": "Application information",
         "info_body": (
             f"{APP_NAME}\n"
@@ -190,14 +164,12 @@ LANG = {
             "can request analyses online."
         ),
 
-        # Detail dialog
         "detail_title": "AI analysis & decision basis",
         "detail_file": "File",
         "detail_classification": "Classification",
         "detail_risk": "Risk score",
         "detail_explanation": "Explanation",
 
-        # --- AI Core / Animation (Persona C) ---
         "ai_core_idle": "AI Core: Idle",
         "ai_core_active_label": "SECUREAI CORE – ACTIVE",
         "ai_core_idle_label": "SECUREAI CORE",
@@ -210,7 +182,6 @@ LANG = {
             "I'm triggering the final decision …",
         ],
 
-        # --- Explainable AI Textbausteine (Persona C) ---
         "ai_explain_header": "I've analyzed this file and determined a classification.",
         "ai_explain_risk": "My current risk score for this file is {score}/100.",
         "ai_explain_no_entities": (
@@ -229,7 +200,6 @@ LANG = {
             "but may still be useful depending on your policies."
         ),
 
-        # Mapping for entity labels
         "entity_EMAIL": "Email address",
         "entity_IBAN": "IBAN",
         "entity_CREDIT_CARD": "Credit card number",
@@ -239,7 +209,6 @@ LANG = {
         "entity_ORG": "Organization",
         "entity_LOCATION": "Location",
 
-        # Optional short hints
         "ai_hint_confidential": (
             "I see personal or business-critical information. "
             "I strongly recommend strong encryption."
