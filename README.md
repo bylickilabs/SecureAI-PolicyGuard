@@ -16,6 +16,8 @@ It bridges security operations, compliance, and IT automation with a dual-layer 
 
 </div>
 
+<div align="center">
+
 <details>
   <summary>🎓 Certifications & Expertise</summary>
 
@@ -78,6 +80,8 @@ It bridges security operations, compliance, and IT automation with a dual-layer 
 
 | ![certificate_of_completion_cyber_security](https://github.com/user-attachments/assets/a99fab6c-4938-4115-83e1-9443b8094ffe) |
 |---|
+
+</div>
 
 </details>
 
