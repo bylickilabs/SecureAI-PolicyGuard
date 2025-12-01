@@ -285,7 +285,6 @@
             display: block;
         }
 
-        /* Small fade-in animation for sections */
         .fade-in {
             opacity: 0;
             transform: translateY(12px);
@@ -304,7 +303,6 @@
             display: inline-block;
         }
 
-        /* Cyberpunk Neon Animation */
         .animated-brand {
             background: linear-gradient(90deg, #00eaff, #ff00c3, #00eaff);
             background-size: 300% 100%;
@@ -326,7 +324,6 @@
             100% { text-shadow: 0 0 16px rgba(255, 0, 195, 0.7); }
         }
 
-        /* PDF-Print: etwas kompakter */
         @media print {
             .navbar, .btn-primary-cyber, .btn-ghost, .btn-lang, .modal, .hero-img-wrapper {
                 display: none !important;
@@ -370,7 +367,6 @@
     position: relative;
 }
 
-/* Pulse Linie oben */
 .cyber-footer::before {
     content: "";
     position: absolute;
@@ -390,7 +386,6 @@
     100% { background-position: 0%; }
 }
 
-/* Brand text */
 .footer-brand {
     font-size: 0.78rem;
     font-weight: 600;
@@ -400,14 +395,12 @@
     text-shadow: 0 0 10px rgba(0,234,255,.4);
 }
 
-/* Hover effect */
 .footer-brand:hover {
     color: var(--accent-secondary);
     text-shadow: 0 0 14px rgba(255,0,195, .75);
     cursor: default;
 }
 
-/* Footer links text */
 footer small {
     font-size: .78rem;
     color: var(--text-muted);
@@ -519,10 +512,10 @@ body {
     overflow-x: auto;
     white-space: nowrap;
     flex-wrap: nowrap !important;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
 .navbar-nav::-webkit-scrollbar {
-    display: none; /* Chrome/Edge */
+    display: none;
 }
 .nav-link {
     padding: .55rem .75rem !important;
@@ -532,10 +525,10 @@ body {
 .navbar-nav {
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
 .navbar-nav::-webkit-scrollbar {
-    display: none; /* Chrome & Edge */
+    display: none;
 }
 
 .nav-link, .btn-ghost, .btn-primary-cyber {
@@ -547,12 +540,12 @@ body {
 }
 
 .nav-actions {
-    margin-right: 2rem;  /* näher zur Mitte */
+    margin-right: 2rem;
 }
 
 @media (max-width: 1400px) {
     .nav-actions {
-        margin-right: 0.5rem; /* für Laptops / Breite Displays */
+        margin-right: 0.5rem;
     }
 }
 
@@ -560,7 +553,7 @@ body {
     .nav-actions {
         width: 100%;
         justify-content: center;
-        margin: .75rem 0 0; /* Mobile neu ausgerichtet */
+        margin: .75rem 0 0;
     }
 }
 
@@ -571,7 +564,6 @@ body {
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid px-3 d-flex align-items-center">
 
-        <!-- LEFT: BRANDING -->
         <a class="navbar-brand d-flex align-items-center gap-2 me-auto" href="#top">
             <i class="bi bi-shield-lock-fill text-info fs-4"></i>
             <div class="d-flex flex-column lh-1">
@@ -580,12 +572,10 @@ body {
             </div>
         </a>
 
-        <!-- MOBILE MENU -->
         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- CENTER: NAVIGATION TABS -->
         <div id="mainNav" class="collapse navbar-collapse justify-content-center">
 
             <ul class="navbar-nav nav-center flex-wrap gap-2">
@@ -650,7 +640,6 @@ body {
 
         </div>
 
-<!-- RIGHT: ACTIONS -->
 <div class="nav-actions d-flex align-items-center gap-2 ms-3">
 
     <button class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#infoModal">
@@ -678,18 +667,15 @@ body {
 
 
 <main class="flex-grow-1" id="top">
-    <!-- HERO -->
     <div class="container hero">
         <div class="row align-items-center g-4">
             <div class="col-lg-6">
-                <!-- German Hero -->
                 <div class="lang-section active-lang" data-lang="de">
                     <span class="section-header d-inline-block mb-2">KI-gestützte Verschlüsselungs-Policies</span>
                     <h1 class="hero-title mb-3">
                         SecureAI PolicyGuard
                     </h1>
 
-                    <!-- Mission Statement (DE) -->
                     <div class="mission-box mt-3 mb-3">
                         <p class="mb-0">
                             SecureAI PolicyGuard analysiert Dateien, klassifiziert sensible Inhalte,
@@ -717,14 +703,12 @@ body {
                     </div>
                 </div>
 
-                <!-- English Hero -->
                 <div class="lang-section" data-lang="en">
                     <span class="section-header d-inline-block mb-2">AI-powered encryption policies</span>
                     <h1 class="hero-title mb-3">
                         SecureAI PolicyGuard
                     </h1>
 
-                    <!-- Mission Statement (EN) -->
                     <div class="mission-box mt-3 mb-3">
                         <p class="mb-0">
                             SecureAI PolicyGuard analyzes files, classifies sensitive content,
@@ -762,11 +746,10 @@ body {
         </div>
     </div>
 
-    <!-- PRODUCT OVERVIEW & ARCHITECTURE -->
+
     <section id="docs-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                         <div>
@@ -820,7 +803,6 @@ start.bat</code></pre>
                     </div>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                         <div>
@@ -876,11 +858,10 @@ start.bat</code></pre>
         </div>
     </section>
 
-    <!-- INSTALLATION & SYSTEM REQUIREMENTS -->
+
     <section id="install-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Installation</div>
                     <h2 class="section-title mb-3">Systemvoraussetzungen & Einrichtung</h2>
@@ -905,7 +886,6 @@ start.bat</code></pre>
                     </ul>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Installation</div>
                     <h2 class="section-title mb-3">System requirements & setup</h2>
@@ -933,13 +913,13 @@ start.bat</code></pre>
         </div>
     </section>
 
-    <!-- API & AUTOMATION -->
+
     <section id="api-section" class="pb-5">
         <div class="container">
             <div class="row g-4 fade-in">
                 <div class="col-lg-6">
                     <div class="section-panel p-4 h-100">
-                        <!-- DE -->
+
                         <div class="lang-section active-lang" data-lang="de">
                             <div class="section-header mb-1">API &amp; Automation</div>
                             <h2 class="section-title mb-3">REST-API &amp; OAS 3.1</h2>
@@ -963,7 +943,6 @@ Content-Type: application/json
                             </p>
                         </div>
 
-                        <!-- EN -->
                         <div class="lang-section" data-lang="en">
                             <div class="section-header mb-1">API &amp; automation</div>
                             <h2 class="section-title mb-3">REST API &amp; OAS 3.1</h2>
@@ -991,7 +970,6 @@ Content-Type: application/json
 
                 <div class="col-lg-6">
                     <div class="section-panel p-4 h-100">
-                        <!-- DE -->
                         <div class="lang-section active-lang" data-lang="de">
                             <div class="section-header mb-1">Automation</div>
                             <h2 class="section-title mb-3">Automatischer Start via Batch</h2>
@@ -1023,7 +1001,6 @@ REM GUI
                             </p>
                         </div>
 
-                        <!-- EN -->
                         <div class="lang-section" data-lang="en">
                             <div class="section-header mb-1">Automation</div>
                             <h2 class="section-title mb-3">Automated start via batch</h2>
@@ -1058,7 +1035,6 @@ REM GUI
                 </div>
             </div>
 
-            <!-- Feature cards -->
             <div class="row g-4 mt-4 fade-in">
                 <div class="col-md-4">
                     <div class="feature-card p-3 h-100">
@@ -1126,11 +1102,9 @@ REM GUI
     </section>
 
 
-    <!-- SECURITY & CRYPTOGRAPHY -->
     <section id="security-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Sicherheit</div>
                     <h2 class="section-title mb-3">Sicherheitsarchitektur & Kryptografie</h2>
@@ -1152,7 +1126,6 @@ REM GUI
                     </p>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Security</div>
                     <h2 class="section-title mb-3">Security architecture & cryptography</h2>
@@ -1177,11 +1150,9 @@ REM GUI
     </section>
 
 
-    <!-- CLASSIFICATION LOGIC & WORKFLOW -->
     <section id="classification-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Klassifizierung</div>
                     <h2 class="section-title mb-3">Klassifizierungslogik & Datenlebenszyklus</h2>
@@ -1208,7 +1179,6 @@ REM GUI
                     </ol>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Classification</div>
                     <h2 class="section-title mb-3">Classification logic & data lifecycle</h2>
@@ -1239,11 +1209,9 @@ REM GUI
     </section>
 
 
-    <!-- LOGGING & AUDIT -->
     <section id="logging-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Audit &amp; Logging</div>
                     <h2 class="section-title mb-3">Protokollierung &amp; Compliance</h2>
@@ -1263,7 +1231,6 @@ REM GUI
                     </p>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Audit &amp; logging</div>
                     <h2 class="section-title mb-3">Logging &amp; compliance</h2>
@@ -1287,11 +1254,9 @@ REM GUI
     </section>
 
 
-    <!-- QUALITY & TESTING -->
     <section id="quality-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Qualitätssicherung</div>
                     <h2 class="section-title mb-3">API-Zertifizierung &amp; Tests</h2>
@@ -1306,7 +1271,6 @@ REM GUI
                     </p>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Quality assurance</div>
                     <h2 class="section-title mb-3">API certification &amp; tests</h2>
@@ -1325,11 +1289,9 @@ REM GUI
     </section>
 
 
-    <!-- ROADMAP -->
     <section id="roadmap-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Roadmap</div>
                     <h2 class="section-title mb-3">Zukünftige Erweiterungen</h2>
@@ -1345,7 +1307,6 @@ REM GUI
                     </p>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Roadmap</div>
                     <h2 class="section-title mb-3">Planned enhancements</h2>
@@ -1364,11 +1325,9 @@ REM GUI
         </div>
     </section>
 
-    <!-- SUPPORT & CONTACT -->
     <section id="support-section" class="pb-5">
         <div class="container">
             <div class="section-panel p-4 p-md-5 fade-in">
-                <!-- DE -->
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="section-header mb-1">Support</div>
                     <h2 class="section-title mb-3">Support &amp; Kontakt</h2>
@@ -1386,7 +1345,6 @@ REM GUI
                     </p>
                 </div>
 
-                <!-- EN -->
                 <div class="lang-section" data-lang="en">
                     <div class="section-header mb-1">Support</div>
                     <h2 class="section-title mb-3">Support &amp; contact</h2>
@@ -1412,13 +1370,11 @@ REM GUI
     <div class="container">
         <div class="row gy-4 align-items-center">
 
-            <!-- Brand Block -->
             <div class="col-md-4 text-center text-md-start">
                 <strong class="footer-brand">BYLICKILABS</strong>
                 <div class="footer-sub">Intelligence Systems & Communications</div>
             </div>
 
-            <!-- Product USP -->
             <div class="col-md-4 text-center">
                 <div class="lang-section active-lang" data-lang="de">
                     <div class="footer-product">SecureAI PolicyGuard</div>
@@ -1430,7 +1386,6 @@ REM GUI
                 </div>
             </div>
 
-            <!-- Quick Actions -->
             <div class="col-md-4 text-center text-md-end">
                 <a href="https://github.com/bylickilabs/SecureAI-PolicyGuard" target="_blank" class="footer-link"> <i class="bi bi-github me-1"></i> GitHub Repository </a>
                 <span class="footer-divider">|</span>
@@ -1441,7 +1396,6 @@ REM GUI
 
         </div>
 
-        <!-- Legal/Version -->
         <div class="text-center mt-3 small footer-legal">
             © <span id="footer-year"></span> BYLICKILABS. All Rights Reserved.
         </div>
@@ -1450,7 +1404,6 @@ REM GUI
 
 
 
-<!-- Info Modal -->
 <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -1515,7 +1468,7 @@ REM GUI
     </div>
 </div>
 
-<!-- Bootstrap 5 JS -->
+
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
@@ -1594,7 +1547,6 @@ REM GUI
 
         fadeIns.forEach(el => observer.observe(el));
 
-        // Smooth scroll for navbar links
         document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
             link.addEventListener("click", e => {
                 const targetId = link.getAttribute("href").substring(1);
@@ -1613,6 +1565,7 @@ REM GUI
 
 </body>
 </html>
+
 
 
 
