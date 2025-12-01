@@ -804,7 +804,7 @@ pip install -r requirements.txt
 uvicorn api.server:app --reload
 
 # 3. Desktop-Anwendung + API via Batch starten
-run_secureai.bat</code></pre>
+start.bat</code></pre>
 
                     <p class="mb-3">
                         Nach dem Start sind die interaktiven API-Dokumente unter
@@ -857,7 +857,7 @@ pip install -r requirements.txt
 uvicorn api.server:app --reload
 
 # 3. Start desktop app + API via batch
-run_secureai.bat</code></pre>
+start.bat</code></pre>
 
                     <p class="mb-3">
                         After starting, the interactive API docs are available at
@@ -1039,7 +1039,8 @@ cd /d "%PROJECT_PATH%"
 set PYTHON=python
 
 REM Start API
-start "SecureAI API" cmd /k "%PYTHON% -m uvicorn api.server:app --reload"
+start "SecureAI API" cmd /k "%PYTHON% -m uvicorn 
+api.server:app --reload"
 
 REM Health &amp; docs in browser
 start "" http://127.0.0.1:8000/health
@@ -1489,9 +1490,7 @@ REM GUI
                     </ul>
                     <p class="mb-0">
                         Weitere Informationen, Source-Code und Releases finden Sie im
-                        <a class="link-neon" href="https://github.com/bylickilabs/SecureAI-PolicyGuard" target="_blank">
-                            offiziellen GitHub-Repository
-                        </a>.
+                        <!--<a class="link-neon" href="https://github.com/bylickilabs/SecureAI-PolicyGuard" target="_blank">offiziellen GitHub-Repository</a>.-->
                     </p>
                 </div>
 
@@ -1507,11 +1506,7 @@ REM GUI
                         <li>Full logging &amp; audit trail</li>
                         <li>Integration via REST API &amp; OpenAPI 3.1</li>
                     </ul>
-                    <p class="mb-0">
-                        For more information, source code and releases, visit the
-                        <a class="link-neon" href="https://github.com/bylickilabs/SecureAI-PolicyGuard" target="_blank">
-                            official GitHub repository
-                        </a>.
+                    <!--<p class="mb-0">For more information, source code and releases, visit the<a class="link-neon" href="https://github.com/bylickilabs/SecureAI-PolicyGuard" target="_blank">official GitHub repository</a>.-->
                     </p>
                 </div>
             </div>
@@ -1625,6 +1620,7 @@ REM GUI
 	
 </body>
 </html>
+
 
 
 
