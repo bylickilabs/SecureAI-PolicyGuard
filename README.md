@@ -225,7 +225,7 @@ Content-Type: application/json
 | entity_count | Number of detected entities |
 | timestamp | Timestamp of operation |
 
-Stored in local SQLite database per workspace.
+> Stored in local SQLite database per workspace.
 
 ---
 
