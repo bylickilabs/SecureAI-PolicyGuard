@@ -19,10 +19,10 @@ It bridges security operations, compliance, and IT automation with a dual-layer 
 <details>
   <summary>🎓 Certifications & Expertise</summary>
 
-| ![certificate_of_completion_python](https://github.com/user-attachments/assets/e0741261-d519-4173-8ffe-dac8bbe821b3) |
+| ![certificate_of_completion_fullstack_developer_with_python (1)](https://github.com/user-attachments/assets/390c7574-0e01-48f3-94e3-a5f74ced5ead) |
 |---|
 
-| ![certificate_of_completion_fullstack_developer_with_python (1)](https://github.com/user-attachments/assets/390c7574-0e01-48f3-94e3-a5f74ced5ead) |
+| ![certificate_of_completion_python](https://github.com/user-attachments/assets/e0741261-d519-4173-8ffe-dac8bbe821b3) |
 |---|
 
 | ![certificate_of_completion_numpy](https://github.com/user-attachments/assets/bb964f82-5a85-45ba-b84c-80d37ba95e7d) |
