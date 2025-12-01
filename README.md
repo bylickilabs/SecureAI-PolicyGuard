@@ -1,3 +1,6 @@
+| [![🧠 SecureAI PolicyGuard – CI/CD Pipeline](https://github.com/bylickilabs/SecureAI-PolicyGuard/actions/workflows/main.yml/badge.svg)](https://github.com/bylickilabs/SecureAI-PolicyGuard/actions/workflows/main.yml) |
+|---|
+
 # 🛡️ SecureAI PolicyGuard  
 BYLICKILABS – Intelligence Systems & Communications  
 
