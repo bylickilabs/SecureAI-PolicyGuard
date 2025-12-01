@@ -19,11 +19,6 @@ It bridges security operations, compliance, and IT automation with a dual-layer 
 <details>
   <summary> Certifications - 🎓 Certifications & Expertise</summary>
 
-<br>
-
-<details>
-  <summary> PYTHON DEVELOPMENT</summary>
-
 | ![certificate_of_completion_python](https://github.com/user-attachments/assets/e0741261-d519-4173-8ffe-dac8bbe821b3) |
 |---|
 
@@ -62,8 +57,6 @@ It bridges security operations, compliance, and IT automation with a dual-layer 
 
 | ![certificate_of_completion_cyber_security](https://github.com/user-attachments/assets/a99fab6c-4938-4115-83e1-9443b8094ffe) |
 |---|
-
-</details>
 
 </details>
 
